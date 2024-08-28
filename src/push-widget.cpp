@@ -202,6 +202,7 @@ class PushWidgetImpl : public PushWidget, public IOBSOutputEventHanlder
                 obs_encoder_set_video(venc, scene_video);
             }
         }
+        auto svc = obs_output_get_service(output_);
 
         if (!using_main_audio_encoder_) {
             auto aenc = obs_output_get_audio_encoder(output_, 0);
